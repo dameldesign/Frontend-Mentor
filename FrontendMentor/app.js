@@ -15,8 +15,9 @@ closeButton.onclick = (e) => {
 };
 
 navContainer.addEventListener("mousemove", (e) => {
-  e.clientX <= 0.315 * document.documentElement.clientWidth &&
-  navContainer.classList.remove("show");
-  closeButton.classList.remove("reveal");
-  menuButton.classList.remove("hide");
+  if (e.clientX <= 0.315 * document.documentElement.clientWidth) {
+    navContainer.classList.remove("show");
+    closeButton.classList.remove("reveal");
+    menuButton.classList.remove("hide");
+  }
 });
